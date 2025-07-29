@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pillar Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    @font-face {
+        font-display: swap;
+        font-family: "Neue Montreal";
+        src: url(/fonts/NeueMontreal-Regular.ttf);
+        font-weight: 400;
+        font-style: normal
+    }
+
+    .pillar-top-main {
+        font-family: "Neue Montreal";
+    }
+
+    .container-r {
+        max-width: 1920px;
+        padding: 0px 20px;
+        margin: 0 auto;
+    }
+
+    /* pillar c */
+
+    .pillar-intro h2 {
+        color: #252525;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal
+    }
+
+    .pillar-intro p {
+        color: #8993A4;
+        font-size: 18px;
+    }
+
+    .pillar-intro ul,
+    .pillar-intro ol {
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+    }
+
+    .pillar-intro li::before {
+        content: "";
+        position: absolute;
+        bottom: auto;
+        top: 0px;
+        background-color: #414141;
+        max-width: 100%;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        left: 0;
+    }
+
+    .pillar-intro li {
+        position: relative;
+        display: flex;
+        padding-left: 36px;
+    }
+
+    .pillar-intro li:not(:last-child):after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        top: auto;
+        background-color: #E8E9EA;
+        max-width: 100%;
+        height: 1px;
+        width: 100%;
+        left: 0;
+
+    }
+
+    .pillar-intro h3 {
+        font-size: 28px;
+        color: #252525;
+    }
+
+    .pillar-intro h4 {
+        font-size: 24px;
+        color: #252525;
+    }
+
+    .pillar-intro h5 {
+        font-size: 20px;
+        color: #252525;
+    }
+
+    .pillar-intro h6 {
+        font-size: 18px;
+        color: #252525;
+    }
+
+    /* pillar c */
+
+    /* aside 3 */
+
+    .aside-pillar-inner ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    }
+
+    .aside-pillar-inner li {
+        color: #8993A4;
+        font-size: 16px;
+    }
+
+    .aside-pillar-inner li.active {
+        color: #252525;
+        font-weight: 600;
+    }
+
+    /* aside 3 */
+
+    /* sidebar */
+    aside#pillar-sidebar > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    aside#pillar-sidebar > ul li {
+        color: #252525;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+        position: relative;
+    }
+
+    aside#pillar-sidebar > ul > li:not(:last-child):after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        top: auto;
+        background-color: #E8E9EA;
+        max-width: 100%;
+        height: 1px;
+        width: 100%;
+        left: 0;
+    }
+   .p-l-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    margin: 12px 0px 0px 12px;
+}
+aside#pillar-sidebar > ul li a.active {
+    color: #8993A4;
+    font-weight: 600;
+}
+
+    /* sidebar */
+</style>
+
+<body class="">
+
+    <!-- Mobile Header -->
+    <header class="lg:hidden flex justify-between sticky top-0 items-center px-4 py-3 shadow z-40 relative bg-white">
+        <button id="menuToggle" class="text-3xl">&#9776;</button>
+        <h1 class="text-lg font-semibold">RVS Media</h1>
+    </header>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40 lg:hidden"></div>
+
+    <div class="flex flex-col lg:flex-row min-h-screen relative container-r pillar-top-main items-start">
+
+        <!-- Sidebar (Animated) -->
+        <aside id="pillar-sidebar"
+            class="w-full  lg:w-1/5 py-20 ps-5 pe-10 fixed lg:sticky bg-white top-0 left-0 h-full z-50 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:block  overflow-y-auto">
+
+            <!-- Close Button for Mobile -->
+            <button id="closeSidebar" class="lg:hidden text-2xl absolute top-4 right-4">&times;</button>
+
+            <ul class="">
+                <li class="active">
+                    <a href="">eCommerce Plan</a>
+                    <ul id="support-sub" class="p-l-inner">
+                        <li><a href="#design" class="active">Design</a></li>
+                        <li><a href="#tools" class="">Tools</a></li>
+                        <li><a href="#social" class="">Social</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="">Introduction</a></li>
+                <li class=""><a href="">Marketplace & Support</a></li>
+                <li class=""><a href="">CRO Overview</a></li>
+                <li class=""><a href="">UX & Design</a></li>
+                <li class=""><a href="">Data-Driven Strategy</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-full lg:w-3/5 lg:px-12  xl:px-20 lg:ml-0 ml-0 order-2 lg:order-2 border-l border-gray-400">
+            <section class="py-6 ps-4 lg:ps-0 lg:py-16">
+                <div class="pillar-intro flex flex-col gap-5">
+                    <h2 class="">Introduction</h2>
+                    <p>
+                        CRO (Conversion Rate Optimisation) is the process of enhancing a website to increase the
+                        percentage of visitors who take a desired action — such as purchasing a product, filling out a
+                        form, or clicking a link. At RVS Media, we help brands optimise digital touchpoints by analysing
+                        user behaviour, personalising user journeys, and testing key conversion elements.
+                    </p>
+                    <ul class="">
+                        <li>Understand the importance of conversion optimization</li>
+                        <li>Learn key CRO strategies</li>
+                        <li>Analyze eCommerce performance</li>
+                    </ul>
+                    <p>
+                        CRO (Conversion Rate Optimisation) is the process of enhancing a website to increase the
+                        percentage of visitors who take a desired action — such as purchasing a product, filling out a
+                        form, or clicking a link. At RVS Media, we help brands optimise digital touchpoints by analysing
+                        user behaviour, personalising user journeys, and testing key conversion elements.
+                    </p>
+                    <h3>Key Areas We'll Cover</h3>
+                    <ul>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                    </ul>
+                    <p>
+                        CRO (Conversion Rate Optimisation) is the process of enhancing a website to increase the
+                        percentage of visitors who take a desired action — such as purchasing a product, filling out a
+                        form, or clicking a link. At RVS Media, we help brands optimise digital touchpoints by analysing
+                        user behaviour, personalising user journeys, and testing key conversion elements.
+                    </p>
+                    <h6>Title with h6</h6>
+                    <ol>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                    </ol>
+                    <h4>Key Areas We'll Cover</h4>
+                    <p>
+                        CRO (Conversion Rate Optimisation) is the process of enhancing a website to increase the
+                        percentage of visitors who take a desired action — such as purchasing a product, filling out a
+                        form, or clicking a link. At RVS Media, we help brands optimise digital touchpoints by analysing
+                        user behaviour, personalising user journeys, and testing key conversion elements.
+                    </p>
+                    <h3>Key Areas We'll Cover</h3>
+                    <h5>List Title</h5>
+                    <ul>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                        <li>What is Conversion Rate Optimisation in eCommerce?</li>
+                    </ul>
+                </div>
+            </section>
+
+
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside class="aside-pillar  w-full lg:w-1/5 py-6 lg:py-12  order-1 lg:order-3 lg:sticky top-0 right-0">
+            <div class="aside-pillar-inner flex flex-col gap-4 border-l border-gray-400 px-4">
+                <h3 class="text-lg text-[#252525] font-semibold">On this page</h3>
+                <ul class="">
+                    <li><a href="#">Introduction</a></li>
+                    <li class="active"><a href="#">CRO Techniques</a></li>
+                    <li><a href="#">UX Optimization</a></li>
+                    <li><a href="#">Data Strategy</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Script for Mobile Sidebar -->
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("pillar-sidebar");
+        const closeSidebar = document.getElementById("closeSidebar");
+        const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            sidebarOverlay.classList.remove("hidden");
+        });
+
+        closeSidebar.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            sidebarOverlay.classList.add("hidden");
+        });
+
+        sidebarOverlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            sidebarOverlay.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>
