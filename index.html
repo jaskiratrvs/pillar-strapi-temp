@@ -66,6 +66,10 @@
         position: relative;
         display: flex;
         padding-left: 36px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
     }
 
     .pillar-intro li:not(:last-child):after {
@@ -125,13 +129,13 @@
     /* aside 3 */
 
     /* sidebar */
-    aside#pillar-sidebar > ul {
+    aside#pillar-sidebar>ul {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
 
-    aside#pillar-sidebar > ul li {
+    aside#pillar-sidebar>ul li {
         color: #252525;
         font-size: 18px;
         font-style: normal;
@@ -140,7 +144,7 @@
         position: relative;
     }
 
-    aside#pillar-sidebar > ul > li:not(:last-child):after {
+    aside#pillar-sidebar>ul>li:not(:last-child):after {
         content: "";
         position: absolute;
         bottom: -20px;
@@ -151,17 +155,19 @@
         width: 100%;
         left: 0;
     }
-   .p-l-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px;
-    margin: 12px 0px 0px 12px;
-}
-aside#pillar-sidebar > ul li a.active {
-    color: #8993A4;
-    font-weight: 600;
-}
+
+    .p-l-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+        margin: 12px 0px 0px 12px;
+    }
+
+    aside#pillar-sidebar>ul li a.active {
+        color: #8993A4;
+        font-weight: 600;
+    }
 
     /* sidebar */
 </style>
